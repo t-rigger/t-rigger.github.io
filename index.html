@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT支援サービス</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold section-title">IT支援サービス</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#about" class="hover:text-gray-500 transition duration-300">代表者紹介</a>
+                <a href="#vision" class="hover:text-gray-500 transition duration-300">私たちの想い</a>
+                <a href="#services" class="hover:text-gray-500 transition duration-300">サービス一覧</a>
+                <a href="#contact" class="hover:text-gray-500 transition duration-300">お問い合わせ</a>
+            </div>
+            <!-- Hamburger Menu for Mobile -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="#about" class="block text-center py-2 hover:bg-gray-100">代表者紹介</a>
+            <a href="#vision" class="block text-center py-2 hover:bg-gray-100">私たちの想い</a>
+            <a href="#services" class="block text-center py-2 hover:bg-gray-100">サービス一覧</a>
+            <a href="#contact" class="block text-center py-2 hover:bg-gray-100">お問い合わせ</a>
+        </div>
+    </header>
+
+    <main class="py-8 md:py-16">
+
+        <!-- Main Visual Section -->
+        <section class="container mx-auto px-4 mb-16 fade-in">
+            <div class="relative overflow-hidden rounded-lg shadow-xl">
+                <img src="https://placehold.co/1200x600/D9D2C6/000?text=明るく+温かい+イメージ画像" alt="メインビジュアル" class="w-full h-auto object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center p-4">
+                    <div class="text-center text-white slide-up">
+                        <h1 class="text-3xl md:text-5xl font-bold section-title leading-tight mb-4 drop-shadow-md">
+                            ITの困りごと、<br class="md:hidden">私たちにご相談ください。
+                        </h1>
+                        <p class="text-base md:text-xl drop-shadow-md">
+                            介護福祉事業所の皆様のIT活用を<br>優しく丁寧にサポートします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (代表者紹介) -->
+        <section id="about" class="container mx-auto px-4 py-16 fade-in">
+            <h2 class="section-title text-center text-4xl md:text-5xl font-bold mb-12">代表者紹介</h2>
+            <div class="md:flex items-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/400x500/E7B9B9/000?text=代表者の写真" alt="代表者" class="rounded-lg shadow-lg max-w-full h-auto slide-up">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-base md:text-lg mb-4 leading-relaxed slide-up">
+                        はじめまして。代表の[あなたの名前]です。<br>
+                        介護福祉事業所での長年の経験から、ITの活用が業務効率化やサービスの質向上に不可欠であると痛感しました。<br>
+                        しかし、専門知識がないために導入をためらう事業所様が多いのも事実です。
+                    </p>
+                    <p class="text-base md:text-lg leading-relaxed slide-up">
+                        私たちは、専門用語を一切使わず、お客様一人ひとりの状況に合わせた最適なIT支援を、まるでフォトスタジオで笑顔を引き出すように、やさしく丁寧に行います。<br>
+                        些細なことでも、まずはお気軽にご相談ください。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section (私たちの想い) -->
+        <section id="vision" class="container mx-auto px-4 py-16 text-center fade-in">
+            <h2 class="section-title text-4xl md:text-5xl font-bold mb-12">私たちの想い</h2>
+            <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed slide-up">
+                テクノロジーの進化は、介護福祉の現場に大きな可能性をもたらします。しかし、新しいことへの挑戦には不安がつきものです。私たちのミッションは、その不安を取り除き、ITを「頼れるパートナー」として受け入れてもらうことです。人と人との温かいコミュニケーションを大切にしながら、より良い未来を共に創造していきます。
+            </p>
+        </section>
+
+        <!-- Services Section (サービス一覧) -->
+        <section id="services" class="container mx-auto px-4 py-16 fade-in">
+            <h2 class="section-title text-center text-4xl md:text-5xl font-bold mb-12">サービス一覧</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
+                         <!-- SVG Icon for Website Creation -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5.5 8a.5.5 0 01.5-.5h8a.5.5 0 010 1h-8a.5.5 0 01-.5-.5zM7 11a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zM8.5 14a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">ホームページ制作</h3>
+                    <p class="text-gray-600">事業所の魅力を伝えるためのホームページを、デザインから運用までトータルでサポートします。</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
+                        <!-- SVG Icon for SNS Operations -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9 6.26a.75.75 0 011.08.08.75.75 0 01-.08 1.08L10 12.5l-3.9-3.9a.75.75 0 011.08-1.08L10 10.92l2.9-2.9zM10 16a6 6 0 100-12 6 6 0 000 12zM10 2a8 8 0 110 16 8 8 0 010-16z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">SNS運用サポート</h3>
+                    <p class="text-gray-600">LINEやFacebookなど、集客に繋がるSNSの活用方法や運用代行を行います。</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
+                        <!-- SVG Icon for IT Support -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2A.5.5 0 0012 2zM14.5 4a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM17 6.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM12 11.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM14.5 14a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM17 16.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM12 21.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM7.5 4a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM5 6.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM2.5 9a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM10 11.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM7.5 14a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM5 16.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM2.5 19a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">業務効率化相談</h3>
+                    <p class="text-gray-600">ITツール導入から業務フローの見直しまで、日々の業務の「困った」を解決します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (お問い合わせ) -->
+        <section id="contact" class="container mx-auto px-4 py-16 text-center fade-in">
+            <h2 class="section-title text-4xl md:text-5xl font-bold mb-12">お問い合わせ</h2>
+            <div class="max-w-xl mx-auto space-y-8">
+                <p class="text-base md:text-lg text-gray-700 slide-up">
+                    ご相談は、LINEまたはメールにてお気軽にご連絡ください。<br>
+                    まずは簡単なご挨拶からでも、心よりお待ちしております。
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 slide-up">
+                    <div class="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
+                        <img src="https://placehold.co/200x200/FFFFFF/000?text=LINE+QRコード" alt="LINE QRコード" class="w-full h-full object-contain p-4">
+                    </div>
+                    <div class="text-left md:text-center">
+                        <p class="text-gray-600">または</p>
+                        <a href="mailto:your-email@example.com" class="text-xl font-bold text-gray-700 hover:text-gray-500 transition duration-300">your-email@example.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 IT支援サービス. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
