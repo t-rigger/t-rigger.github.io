@@ -50,15 +50,16 @@ body {
 }
 
 /* Vision Text Styling */
-/* !important を使用してTailwindのスタイルを強制的に上書き */
 .vision-text {
     font-family: 'Noto Serif JP', serif !important;
     font-weight: 700 !important;
-    font-size: 2.5rem !important; /* テキストを大きく強調 */
-    color: #5C4B51 !important; /* 濃いめの色でより強調 */
-    letter-spacing: 0.05em !important;
-    line-height: 1.8 !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+    font-size: 2.5rem !important; /* フォントサイズをより大きく */
+    color: #5C4B51 !important;
+    letter-spacing: 0.1em !important; /* 文字間隔を広げて洗練された印象に */
+    line-height: 1.6 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15) !important; /* 影をより強く、立体感を出す */
+    border-bottom: 3px solid #E7B9B9; /* 下線を追加してアクセントに */
+    padding-bottom: 1rem; /* 下線と文字の間に余白を追加 */
 }
 
 /* Media queries for smaller screens to adjust font sizes */
@@ -67,6 +68,6 @@ body {
         font-size: 2rem;
     }
     .vision-text {
-        font-size: 1.5rem !important; /* モバイル版での文字サイズ調整 */
+        font-size: 1.5rem !important; /* モバイル版での文字サイズを調整 */
     }
 }
