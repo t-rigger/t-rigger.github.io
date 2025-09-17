@@ -49,15 +49,16 @@ body {
     transform: translateY(0);
 }
 
-/* Vision Section Specific Styles */
-.vision-section .vision-text {
-    font-family: 'Noto Serif JP', serif;
-    font-weight: 700;
-    font-size: 2.5rem; /* テキストを大きく強調 */
-    color: #5C4B51; /* 濃いめの色でより強調 */
-    letter-spacing: 0.05em;
-    line-height: 1.8;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+/* Vision Text Styling */
+/* !important を使用してTailwindのスタイルを強制的に上書き */
+.vision-text {
+    font-family: 'Noto Serif JP', serif !important;
+    font-weight: 700 !important;
+    font-size: 2.5rem !important; /* テキストを大きく強調 */
+    color: #5C4B51 !important; /* 濃いめの色でより強調 */
+    letter-spacing: 0.05em !important;
+    line-height: 1.8 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Media queries for smaller screens to adjust font sizes */
@@ -65,7 +66,7 @@ body {
     .section-title {
         font-size: 2rem;
     }
-    .vision-section .vision-text {
-        font-size: 1.5rem; /* モバイル版での文字サイズ調整 */
+    .vision-text {
+        font-size: 1.5rem !important; /* モバイル版での文字サイズ調整 */
     }
 }
