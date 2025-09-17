@@ -48,9 +48,23 @@ body {
     transform: translateY(0);
 }
 
+/* Vision Text Styling */
+.vision-text {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #5C4B51;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 /* Media queries for smaller screens to adjust font sizes */
 @media (max-width: 768px) {
     .section-title {
         font-size: 2rem;
+    }
+    .vision-text {
+        font-size: 1.25rem;
     }
 }
