@@ -54,7 +54,7 @@ body {
     font-family: 'Noto Serif JP', serif !important;
     font-weight: 700 !important;
     font-size: 2rem !important; /* フォントサイズをさらに大きく */
-    color: #333333 !important;
+    color: #555555 !important;
     letter-spacing: 0.15em !important; /* 文字間隔を広げて洗練された印象に */
     line-height: 1.6 !important;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3) !important; /* 影をより強く、立体感を出す */
