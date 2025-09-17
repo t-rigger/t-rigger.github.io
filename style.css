@@ -16,7 +16,7 @@ body {
 .section-title {
     font-family: 'Noto Serif JP', serif;
     font-size: 2.5rem;
-    text-align: center; /* 見出しを中央揃えにするための修正 */
+    text-align: center;
 }
 
 .text-light-brown {
@@ -49,11 +49,11 @@ body {
     transform: translateY(0);
 }
 
-/* Vision Text Styling */
-.vision-text {
+/* Vision Section Specific Styles */
+.vision-section .vision-text {
     font-family: 'Noto Serif JP', serif;
     font-weight: 700;
-    font-size: 2rem; /* 文字サイズを大きく強調 */
+    font-size: 2.5rem; /* テキストを大きく強調 */
     color: #5C4B51; /* 濃いめの色でより強調 */
     letter-spacing: 0.05em;
     line-height: 1.8;
@@ -65,7 +65,7 @@ body {
     .section-title {
         font-size: 2rem;
     }
-    .vision-text {
+    .vision-section .vision-text {
         font-size: 1.5rem; /* モバイル版での文字サイズ調整 */
     }
 }
