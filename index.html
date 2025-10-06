@@ -1,146 +1,265 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRiGGER</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="antialiased">
-
-    <header class="bg-white sticky top-0 z-50 shadow-md">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold section-title">TRiGGER</a>
-            <div class="space-x-8 hidden md:flex">
-                <a href="#services" class="hover:text-gray-500 transition duration-300">サービス一覧</a>
-                <a href="#vision" class="hover:text-gray-500 transition duration-300">私たちの想い</a>
-                <a href="#about" class="hover:text-gray-500 transition duration-300">代表者紹介</a>
-                <a href="#contact" class="hover:text-gray-500 transition duration-300">お問い合わせ</a>
-            </div>
-            <button id="mobile-menu-button" class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>スポットエンジニア - あなたの会社のIT担当者になります</title><link rel="stylesheet" href="style.css"></head><body><header>
+    <div class="header-container">
+        <a href="#" class="logo">スポットエンジニア</a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#problems">お困りごと</a></li>
+                <li><a href="#services">サービス紹介</a></li>
+                <li><a href="#achievements">実績</a></li>
+                <li><a href="#about">私たちの想い</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
-            <a href="#services" class="block text-center py-2 hover:bg-gray-100">サービス一覧</a>
-            <a href="#vision" class="block text-center py-2 hover:bg-gray-100">私たちの想い</a>
-            <a href="#about" class="block text-center py-2 hover:bg-gray-100">代表者紹介</a>
-            <a href="#contact" class="block text-center py-2 hover:bg-gray-100">お問い合わせ</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main class="py-8 md:py-16">
+<main>
+    <section class="hero visible">
+        <h1>あなたの会社のIT担当者になります</h1>
+        <p class="subtitle">必要なときに、必要な分だけ。貴社のIT部門として活躍します。</p>
+        <a href="#contact" class="cta-button">まずは無料相談から</a>
+    </section>
 
-        <section class="container mx-auto px-4 mb-16 fade-in">
-            <div class="relative overflow-hidden rounded-lg shadow-xl">
-                <img src="cover.JPG" alt="メインビジュアル" class="w-full h-auto object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center p-4">
-                    <div class="text-center text-white slide-up">
-                        <h1 class="text-3xl md:text-5xl font-bold section-title leading-tight mb-4 drop-shadow-md">
-                            ITのお困りごと、<br class="md:hidden">私たちにご相談ください。
-                        </h1>
-                        <p class="text-base md:text-xl drop-shadow-md">
-                            どんなことも、だれにでも<br>優しく丁寧にサポートします。
-                        </p>
-                    </div>
-                </div>
+    <section id="problems" class="container">
+        <h2>こんなお困りごとはありませんか？</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="icon">💻</div>
+                <h3>IT担当者不在</h3>
+                <p>知識や経験のある人にITに関する事を任せたいが、大きなコストをかけたくない。</p>
             </div>
-        </section>
-
-        <section id="services" class="container mx-auto px-4 py-16 fade-in">
-            <h2 class="section-title text-center text-4xl md:text-5xl font-bold mb-12">サービス一覧</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5.5 8a.5.5 0 01.5-.5h8a.5.5 0 010 1h-8a.5.5 0 01-.5-.5zM7 11a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5zM8.5 14a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5z" clip-rule="evenodd" fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">PC・プリンタ等IT機器の導入</h3>
-                    <p class="text-gray-600">様々なIT機器の選定や導入のご相談、支援を行います</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.9 6.26a.75.75 0 011.08.08.75.75 0 01-.08 1.08L10 12.5l-3.9-3.9a.75.75 0 011.08-1.08L10 10.92l2.9-2.9zM10 16a6 6 0 100-12 6 6 0 000 12zM10 2a8 8 0 110 16 8 8 0 010-16z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">ITツールやWi-Fiの導入</h3>
-                    <p class="text-gray-600">新しいITツールや、Wi-Fi導入のご相談、支援まで行います</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center transition-transform transform hover:scale-105 duration-300 slide-up">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-light-salmon rounded-full flex items-center justify-center text-white">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2A.5.5 0 0012 2zM14.5 4a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM17 6.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM12 11.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM14.5 14a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM17 16.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM12 21.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM7.5 4a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM5 6.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM2.5 9a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM10 11.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM7.5 14a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM5 16.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5zM2.5 19a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2">業務効率化</h3>
-                    <p class="text-gray-600">日々の業務の「困った」「もっと便利にしたい」のご相談を承り、実装まで行います</p>
-                </div>
+            <div class="problem-card">
+                <div class="icon">📄</div>
+                <h3>紙を使った作業が多い</h3>
+                <p>とにかく紙が多く、記録や事務作業に時間がかかっている。</p>
             </div>
-        </section>
-
-        <section id="vision" class="container mx-auto px-4 py-16 text-center fade-in">
-            <h2 class="section-title text-4xl md:text-5xl font-bold mb-12">私たちの想い</h2>
-            <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed slide-up vision-text">
-                テクノロジーの力で、人と人が温かく<br>つながる社会を創る
-            </p>
-        </section>
-
-        <section id="about" class="container mx-auto px-4 py-16 fade-in">
-            <h2 class="section-title text-center text-4xl md:text-5xl font-bold mb-12">代表者紹介</h2>
-            <div class="md:flex items-center space-y-8 md:space-y-0 md:space-x-12">
-                <div class="md:w-1/2 flex justify-center">
-                    <img src="icon.JPG" alt="代表者" class="rounded-lg shadow-lg max-w-full h-auto slide-up">
-                </div>
-                <div class="md:w-1/2">
-                    <p class="text-base md:text-lg mb-4 leading-relaxed slide-up">
-                        はじめまして。代表の安里（あさと）です。<br>
-                        様々な業界での経験を得て、どの業種においてもITの活用がサービスの質向上に不可欠であると痛感しています。<br>
-                        しかし、「専門知識がないから…」「相談できる人がいない…」といった理由で、IT導入をためらっている事業所様が非常に多いのも事実です。
-                    </p>
-                    <p class="text-base md:text-lg leading-relaxed slide-up">
-                        私たちは、そんな皆さまのIT担当として、どんなに些細なことでも気軽に相談できる、身近な存在でありたいと考えています。<br>
-                        「こんなこと聞いてもいいのかな？」と迷うような小さなことからでも、ぜひお気軽にご相談ください。
-                    </p>
-                </div>
+            <div class="problem-card">
+                <div class="icon">❓</div>
+                <h3>システムを使いこなせていない</h3>
+                <p>システムを導入してはみたが活用できておらず、業務の効率化に繋がらない。</p>
             </div>
-        </section>
-
-        <section id="contact" class="container mx-auto px-4 py-16 text-center fade-in">
-            <h2 class="section-title text-4xl md:text-5xl font-bold mb-12">お問い合わせ</h2>
-            <div class="max-w-xl mx-auto space-y-8">
-                <p class="text-base md:text-lg text-gray-700 slide-up">
-                    ご相談は、LINEまたはメールにてお気軽にご連絡ください。<br>
-                    まずは簡単なご相談からでも、心よりお待ちしております。
-                </p>
-                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 slide-up">
-                    <div class="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center shadow-md">
-                        <img src="qr.png" alt="LINE QRコード" class="w-full h-full object-contain p-4">
-                    </div>
-                    <div class="text-left md:text-center">
-                        <p class="text-gray-600">または</p>
-                        <a href="info@t-rigger.net" class="text-xl font-bold text-gray-700 hover:text-gray-500 transition duration-300">info@t-rigger.net</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-100 py-8 text-center text-sm text-gray-500">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2025 TRiGGER. All Rights Reserved.</p>
         </div>
-    </footer>
-    
-    <script src="script.js"></script>
+    </section>
 
-</body>
-</html>
+    <section id="services" class="container" style="background-color: var(--secondary-color);">
+        <h2>サービス紹介</h2>
+        <div class="service-intro">
+            <p>「<strong>スポットエンジニア</strong>」は、必要なときに、必要な分だけ、貴社のIT部門として活躍するアウトソーシングサービスです。 まるで社内にIT担当者がいるかのような安心感を、<strong>月額6万円</strong>からという現実的なコストで実現します。 私たちは単にトラブルを解決するだけではありません。貴社の課題に寄り添い、ITを「コスト」から「武器」へと変えるパートナーです。</p>
+        </div>
+
+        <div class="strengths-section">
+            <h3 class="strengths-title">私たちの強み</h3>
+            <div class="strengths-grid">
+                <div class="strength-card">
+                    <div class="strength-icon">🤝</div>
+                    <h4>介護・福祉業界で働く方への理解</h4>
+                    <p>介護・福祉事業所でのエンジニア経験がある担当が、現場の状況を深く理解した上で、最適なIT活用をご提案・サポートいたします。</p>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-icon">👨‍🔧</div>
+                    <h4>顔の見える直接サポート</h4>
+                    <p>オンラインが主流の時代だからこそ、私たちは現場でのサポートを大切にしています。操作説明や急なトラブル対応など、必要に応じて可能な範囲で、実際に現場へお伺いして直接解決にあたります。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="free-consultation">
+            <h3>まずは初回無料相談をご利用ください</h3>
+            <p>月額契約の前に、まずは2時間の無料ご相談プランをご利用ください。 お話を伺った上で、今取り組むべき課題と具体的なアクションプランをご提案いたします。</p>
+            <div class="special-offer">
+                <p><strong>【限定特典】</strong>無料相談をご利用いただいた方限定で、<strong>契約初月は3万円から</strong>サポートいたします！</p>
+            </div>
+            <a href="#contact" class="consultation-cta" style="margin-top: 30px; margin-bottom: 20px;">まずは無料相談から</a>
+            <div class="consultation-steps">
+                <div class="step"><span class="number">1</span>業務内容とお悩みごとをヒアリング</div>
+                <div class="step"><span class="number">2</span>お悩みが発生している現場の確認</div>
+                <div class="step"><span class="number">3</span>課題とプランをまとめたレポートをお渡し</div>
+            </div>
+        </div>
+
+        <h3 style="text-align:center; margin-top: 70px; margin-bottom: 30px; font-size: 1.8rem; color: var(--primary-color);">月額サブスクプラン</h3>
+        <div class="pricing-table">
+            <div class="plan">
+                <h3>① IT相談窓口プラン</h3>
+                <span class="role">IT全般の「通訳・相談役」(守り)</span>
+                <div class="price">
+                    <div class="price-wrapper">
+                        <span class="original-price">6万円/月</span>
+                        <span class="arrow">→</span>
+                        3<span>万円/月 (税別)</span>
+                    </div>
+                    <span class="price-note">※初回相談特典 限定価格</span>
+                </div>
+                <p class="target">使用しているPCやアプリの困り事を解決したい事業者様へ</p>
+                <ul>
+                    <li><strong>上限稼働時間:</strong> 20時間/月</li>
+                    <li>既存システムに関する相談</li>
+                    <li>PC・周辺機器の操作サポート</li>
+                    <li>使っているPCやスマホ、アプリに関する相談</li>
+                    <li>トラブル解決</li>
+                </ul>
+            </div>
+            <div class="plan recommended">
+                <h3>② 業務改善プラン</h3>
+                <span class="role">既存業務の「改善・実行役」(守り+改善)</span>
+                <div class="price">
+                    <div class="price-wrapper">
+                         <span class="original-price">12万円/月</span>
+                         <span class="arrow">→</span>
+                        6<span>万円/月 (税別)</span>
+                    </div>
+                     <span class="price-note">※初回相談特典 限定価格</span>
+                </div>
+                <p class="target">手作業やルーティン業務を効率化したい事業者様へ</p>
+                <ul>
+                    <li><strong>上限稼働時間:</strong> 40時間/月</li>
+                    <li>プラン①の内容すべて</li>
+                    <li>既存業務の改善提案と実行支援</li>
+                    <li>Excelやその他業務の効率化</li>
+                    <li>PC等のセットアップ作業 (5台/月まで)</li>
+                </ul>
+            </div>
+            <div class="plan">
+                <h3>③ デジタル化推進プラン</h3>
+                <span class="role">業務を作り直す「デジタル化推進パートナー」 (守り+改善+攻め)</span>
+                <div class="price">24<span>万円/月 (税別)</span></div>
+                <p class="target">新しいシステムを導入して業務を大きく変える必要がある事業者様へ</p>
+                <ul>
+                    <li><strong>上限稼働時間:</strong> 80時間/月</li>
+                    <li>プラン①②の内容すべて</li>
+                    <li>新規システムの導入・定着支援</li>
+                    <li>社内IT担当者の育成</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3 style="text-align:center; margin-top: 70px; margin-bottom: 30px; font-size: 1.8rem; color: var(--primary-color);">スポットプラン</h3>
+        <div class="spot-plans">
+            <div class="spot-plan-card">
+                 <h3>開発業務プラン</h3>
+                 <p>業務効率化のためのツール開発や、Webサイトの改修等の開発作業を行います。</p>
+            </div>
+            <div class="spot-plan-card">
+                 <h3>時間数追加プラン</h3>
+                 <p>各種プランについて、上限稼働時間数を追加する場合にご利用いただけるプランです。</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="achievements" class="container">
+        <h2>過去のおもな実績</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <h3><span class="num">1</span>紙を見てPCへ入力する作業を無くす</h3>
+                <div class="achievement-comparison">
+                    <div class="comparison-box before">
+                        <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5?q=80&w=2070&auto=format&fit=crop" alt="山積みの書類">
+                        <h4>【改善前】</h4>
+                        <p>紙の情報をシステムへ手入力していたため、データ反映に時間がかかり、効率の悪さと大きなストレスを感じていた。</p>
+                    </div>
+                    <div class="comparison-box after">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="整理されたデジタルデータ">
+                        <h4>【改善後】</h4>
+                        <p>そもそも紙の情報を作り出さない体制に変更。いまあるシステムを活用することで手入力を無くす事ができた。</p>
+                    </div>
+                </div>
+            </div>
+             <div class="achievement-item">
+                <h3><span class="num">2</span>手作業での書類送付を自動化</h3>
+                <div class="achievement-comparison">
+                    <div class="comparison-box before">
+                        <img src="https://images.unsplash.com/photo-1609701625594-1a1a4782a5a5?q=80&w=1974&auto=format&fit=crop" alt="手作業での封筒詰め">
+                        <h4>【改善前】</h4>
+                        <p>ご家族様への書類送付を手作業で行っていたため、3人がかりで3日もかかっていた。</p>
+                    </div>
+                    <div class="comparison-box after">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop" alt="自動送信のアイコン">
+                        <h4>【改善後】</h4>
+                        <p>新システムとExcelを組み合わせ自動化する事で手作業の書類送付が無くなった。3人で3日かかっていた作業は1人30分程度の作業で対応可能になった。</p>
+                    </div>
+                </div>
+            </div>
+             <div class="achievement-item">
+                <h3><span class="num">3</span>ご家族様への連絡手段を改善</h3>
+                <div class="achievement-comparison">
+                    <div class="comparison-box before">
+                        <img src="https://images.unsplash.com/photo-1528747045269-3509c3e2addd?q=80&w=2070&auto=format&fit=crop" alt="電話に追われる人">
+                        <h4>【改善前】</h4>
+                        <p>ご家族様への連絡にスマホのショートメッセージ機能を使っており、一斉送信ができず、連絡に時間を要していた。</p>
+                    </div>
+                    <div class="comparison-box after">
+                         <img src="https://images.unsplash.com/photo-1596526131238-a2a49b6b0b8c?q=80&w=2070&auto=format&fit=crop" alt="一斉送信完了画面">
+                        <h4>【改善後】</h4>
+                        <p>新システムと、ご家族様の連絡先が纏められたExcelを連携することにより一斉送信が1分でできるようになった。さらに、ご家族様の携帯電話への到達確認も可能に。</p>
+                    </div>
+                </div>
+            </div>
+             <div class="achievement-item">
+                <h3><span class="num">4</span>ご利用者様の転倒事故原因を特定可能に</h3>
+                <div class="achievement-comparison">
+                    <div class="comparison-box before">
+                         <img src="https://images.unsplash.com/photo-1534447422338-69b61515582a?q=80&w=1961&auto=format&fit=crop" alt="疑問符">
+                        <h4>【改善前】</h4>
+                        <p>見えてない場所やタイミングでご利用者様の転倒事故等が発生した際に、原因の特定ができずに、同じような事故が複数回発生していた。</p>
+                    </div>
+                    <div class="comparison-box after">
+                         <img src="https://images.unsplash.com/photo-1587573489243-524159419516?q=80&w=2070&auto=format&fit=crop" alt="監視カメラの映像">
+                        <h4>【改善後】</h4>
+                        <p>防犯カメラを導入することで迅速な事故原因の特定が可能になり、改善・周知までをスピーディーに対応できるようになった。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="philosophy">
+            <h3>ビジョン</h3>
+            <blockquote>「テクノロジーの力で、人と人が温かく つながる社会を創る」</blockquote>
+        </div>
+        <div class="container">
+             <h2 style="margin-bottom: 60px;">代表者紹介</h2>
+             <div class="representative-flex">
+                 <!-- This is a placeholder for the representative's photo -->
+                 <div class="rep-photo"></div>
+                 <div class="rep-message">
+                     <h3>代表 安里 (あさと)</h3>
+                     <p class="greeting">はじめまして。代表の安里です。</p>
+                     <p>様々な業界での経験を得て、どの業種においてもITの活用がサービスの質向上に不可欠であると痛感しています。 しかし、「専門知識がないから...」「相談できる人がいない...」といった理由で、IT導入をためらっている事業所様が非常に多いのも事実です。</p>
+                     <p>私たちは、そんな皆さまのIT担当として、どんなに些細なことでも気軽に相談できる、身近な存在でありたいと考えています。 「こんなこと聞いてもいいのかな？」と迷うような小さなことからでも、ぜひお気軽にご相談ください。</p>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="background-color: var(--secondary-color);">
+        <h2>お問い合わせ</h2>
+        <p>ITに関するお悩みや業務改善のご相談など、お気軽にご連絡ください。<br>まずは無料相談から、貴社の課題解決をお手伝いします。</p>
+        <div class="contact-methods">
+            <div class="contact-card">
+                <h3>メールアドレス</h3>
+                <a href="mailto:info@t-rigger.net">info@t-rigger.net</a>
+            </div>
+            <div class="contact-card">
+                <h3>LINE</h3>
+                <p>QRコードから友達追加の上、ご連絡ください。</p>
+                <!-- Replace the src with your actual LINE QR code image file -->
+                <img src="https://placehold.co/150x150/f0f4f8/6c94a3?text=LINE+QR" alt="LINE QR Code">
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 スポットエンジニア. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body></html>
