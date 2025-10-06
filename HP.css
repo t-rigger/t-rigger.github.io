@@ -651,6 +651,7 @@ nav ul li a:hover::after {
 .contact-methods {
     display: flex;
     justify-content: center;
+    align-items: stretch; /* カードの高さを揃える */
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -663,6 +664,7 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* カード内の要素を中央揃えに */
 }
 
 .contact-card h3 {
