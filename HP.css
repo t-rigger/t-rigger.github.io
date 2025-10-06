@@ -607,7 +607,7 @@ nav ul li a:hover::after {
     box-shadow: var(--shadow);
     margin: 0 auto;
     /* Placeholder for an actual photo */
-    background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop');
+    background-image: url('icon.JPG');
     background-size: cover;
     background-position: center;
 }
