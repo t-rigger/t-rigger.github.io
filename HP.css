@@ -660,6 +660,9 @@ nav ul li a:hover::after {
     padding: 30px;
     border-radius: var(--border-radius);
     min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-card h3 {
