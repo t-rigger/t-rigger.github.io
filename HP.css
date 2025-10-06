@@ -412,7 +412,7 @@ nav ul li a:hover::after {
     background-color: var(--secondary-color);
     padding: 30px;
     border-radius: var(--border-radius);
-    border-left: 5px solid var(--accent-color);
+    text-align: center;
 }
 
 .spot-plan-card h3 {
