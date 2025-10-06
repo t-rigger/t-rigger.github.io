@@ -297,6 +297,7 @@ nav ul li a:hover::after {
     border-top: 5px solid var(--primary-color);
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .plan.recommended {
@@ -366,6 +367,7 @@ nav ul li a:hover::after {
     list-style: none;
     margin-bottom: 30px;
     flex-grow: 1;
+    text-align: left;
 }
 
 .plan ul li {
