@@ -65,7 +65,13 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-bottom: 40px; /* 各セクションの下に余白を追加 */
 }
+
+section:last-of-type {
+    margin-bottom: 0; /* 最後のセクションの余白を削除 */
+}
+
 
 section.visible {
     opacity: 1;
