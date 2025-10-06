@@ -65,7 +65,7 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    margin-bottom: 40px; /* 各セクションの下に余白を追加 */
+    margin-bottom: 60px; /* 各セクションの下に余白を増やしました (40px -> 60px) */
 }
 
 section:last-of-type {
@@ -246,7 +246,7 @@ nav ul li a:hover::after {
 
 .service-intro strong {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* Strengths Section */
