@@ -246,7 +246,7 @@ nav ul li a:hover::after {
 
 .service-intro strong {
     color: var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 /* Strengths Section */
