@@ -1,4 +1,4 @@
-@import url('https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP:wght%40300%3B400%3B500%3B700%26display%3Dswap');
+@import url('https://www.google.com/url?sa=E&source=gmail&q=https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700%26display=swap');
 
 :root {
 --primary-color: #6c94a3;
@@ -721,28 +721,22 @@ border-bottom: 1px solid var(--secondary-color);
 nav ul li a::after {
 display: none;
 }
-
 .menu-toggle {
-    display: flex;
+display: flex;
 }
-
 .hero h1 {
-    font-size: 2.2rem;
+font-size: 2.2rem;
 }
-
 h2 {
-    font-size: 1.8rem;
+font-size: 1.8rem;
 }
-
 .container {
-    padding: 60px 0;
+padding: 60px 0;
 }
-
 .achievement-comparison {
-    flex-direction: column;
+flex-direction: column;
 }
 .comparison-box {
-    width: 100%;
+width: 100%;
 }
-
 }
