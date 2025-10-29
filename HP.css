@@ -342,7 +342,7 @@ nav ul li a:hover::after {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
