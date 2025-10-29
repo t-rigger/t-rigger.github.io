@@ -464,6 +464,16 @@ nav ul li a:hover::after {
     font-weight: 700;
 }
 
+/* ★ 変更点: 以下のスタイルを追加しました ★ */
+.special-offer .highlight-price {
+    font-size: 1.8rem; /* 元の1.2remより大きく設定 */
+    font-weight: 700; /* 太字を維持 */
+    color: #ffffff; /* 背景がオレンジなので白文字を維持 */
+    display: inline-block; /* 改行後の見た目を調整 */
+    margin-top: 5px; /* 上の行との間に少しスペースを追加 */
+}
+/* ★ ここまで ★ */
+
 .consultation-steps {
     display: flex;
     justify-content: center;
@@ -759,9 +769,4 @@ footer {
     .comparison-box {
         width: 100%;
     }
-    .special-offer .highlight-price {
-  font-size: 2.0em !important; /* 親要素(1.2rem)の1.5倍の大きさになります */
-  /* font-size: 1.8rem; のように直接指定も可能です */
-    }
 }
-
