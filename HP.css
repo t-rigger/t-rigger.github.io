@@ -342,8 +342,9 @@ nav ul li a:hover::after {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* ★「wrap」から「nowrap」に変更しました */
     justify-content: center;
+    white-space: nowrap; /* ★ この行を追加しました */
 }
 
 .plan .price .original-price {
