@@ -759,5 +759,9 @@ footer {
     .comparison-box {
         width: 100%;
     }
+    .special-offer .highlight-price {
+  font-size: 1.5em; /* 親要素(1.2rem)の1.5倍の大きさになります */
+  /* font-size: 1.8rem; のように直接指定も可能です */
+    }
 }
 
