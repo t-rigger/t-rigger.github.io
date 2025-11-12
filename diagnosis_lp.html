@@ -197,6 +197,18 @@
                     <label for="phone" class="block text-left font-bold mb-2">電話番号 <span class="text-red-500 text-sm">(必須)</span></label>
                     <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg" required>
                 </div>
+                <div class="mb-4">
+                    <p class="text-sm text-left text-gray-600 mb-2">ご訪問希望日時をカレンダーから選択してください。</p>
+                    
+                    <label for="visit_date_1" class="block text-left font-bold mb-2">ご訪問希望日時 ① <span class="text-red-500 text-sm">(必須)</span></label>
+                    <input type="datetime-local" id="visit_date_1" name="visit_date_1" class="w-full p-3 border border-gray-300 rounded-lg mb-3" required>
+                    
+                    <label for="visit_date_2" class="block text-left font-bold mb-2">ご訪問希望日時 ② <span class="text-gray-500 text-sm">(任意)</span></label>
+                    <input type="datetime-local" id="visit_date_2" name="visit_date_2" class="w-full p-3 border border-gray-300 rounded-lg mb-3">
+                    
+                    <label for="visit_date_3" class="block text-left font-bold mb-2">ご訪問希望日時 ③ <span class="text-gray-500 text-sm">(任意)</span></label>
+                    <input type="datetime-local" id="visit_date_3" name="visit_date_3" class="w-full p-3 border border-gray-300 rounded-lg">
+                </div>
                 <div class="mb-6">
                     <label for="message" class="block text-left font-bold mb-2">現在のお困りごと（簡単にで結構です）</label>
                     <textarea id="message" name="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="例：記録システムを導入したが、結局Excelにも入力している。"></textarea>
