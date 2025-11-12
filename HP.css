@@ -165,12 +165,34 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-    /* Using an external image for a professional look. Replace with your own if you have one. */
-    background: linear-gradient(rgba(240, 244, 248, 0.8), rgba(240, 244, 248, 0.8)), url('icon.JPG') no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    padding: 180px 0 120px;
+    position: relative; /* 疑似要素(::before)の位置の基準にする */
+    overflow: hidden; /* ぼかしたフチがはみ出ないように */
+    background-color: rgba(240, 244, 248, 0.8); /* 半透明のオーバーレイをここに指定 */
+    background-size: cover;
+    text-align: center;
+    padding: 180px 0 120px;
+    /* background: ... の行は削除（または上記のように変更） */
 }
+
+/* ▼【追加】ヒーローの背景画像をぼかすための疑似要素 ▼ */
+.hero::before {
+    content: '';
+    position: absolute;
+    /* ぼかしのフチが切れないよう、上下左右に少し拡大 */
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    
+    background: url('icon.JPG') no-repeat center center;
+    background-size: cover;
+    
+    /* ↓ ここでぼかし具合（px）を調整できます */
+    filter: blur(4px); 
+    
+    z-index: -1; /* コンテンツの後ろに配置 */
+}
+/* ▲【追加】ここまで ▲ */
 
 .hero h1 {
     font-size: 3rem;
