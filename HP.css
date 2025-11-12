@@ -11,6 +11,7 @@
     --border-radius: 12px;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     --transition-speed: 0.3s;
+    --request-button-color: #FF6600;
 }
 
 /* Reset and Base Styles */
@@ -56,7 +57,7 @@ h2::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: var(--accent-color);
+    background: var(--request-button-color);
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -209,7 +210,7 @@ nav ul li a:hover::after {
 
 .hero .cta-button, .consultation-cta {
     display: inline-block;
-    background-color: var(--accent-color);
+    background-color: var(--request-button-color);
     color: var(--bg-color);
     padding: 15px 35px;
     border-radius: 50px;
