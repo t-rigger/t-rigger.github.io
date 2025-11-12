@@ -803,14 +803,14 @@ footer {
 
 /* ▼【追加】無料IT診断ナビリンクの強調スタイル ▼ */
 li.nav-diagnosis-link a {
-    color: var(--accent-color) !important;
+    color: var(--request-button-color) !important;
     font-weight: 700 !important;
 }
 
 /* デスクトップ表示ではボタン風に */
 @media (min-width: 769px) {
     li.nav-diagnosis-link a {
-        background-color: var(--accent-color);
+        background-color: var(--request-button-color);
         color: white !important;
         padding: 8px 15px !important; /* 上書きのため !important を使用 */
         border-radius: 20px;
