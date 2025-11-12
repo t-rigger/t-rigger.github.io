@@ -771,3 +771,41 @@ footer {
         width: 100%;
     }
 }
+/* ... 既存のコード ... */
+
+footer {
+    background-color: var(--text-color);
+/* ... 既存のコード ... */
+}
+
+/* ▼【追加】無料IT診断ナビリンクの強調スタイル ▼ */
+li.nav-diagnosis-link a {
+    color: var(--accent-color) !important;
+    font-weight: 700 !important;
+}
+
+/* デスクトップ表示ではボタン風に */
+@media (min-width: 769px) {
+    li.nav-diagnosis-link a {
+        background-color: var(--accent-color);
+        color: white !important;
+        padding: 8px 15px !important; /* 上書きのため !important を使用 */
+        border-radius: 20px;
+        transition: background-color 0.3s;
+        /* margin-top: -8px; 
+           ↑他要素との並びが崩れる場合は、この行のコメントを解除して調整してください 
+        */
+    }
+    li.nav-diagnosis-link a:hover {
+        background-color: #e69560; /* 少し濃いアクセント色 */
+        color: white !important;
+    }
+    li.nav-diagnosis-link a::after {
+        display: none !important; /* 下線を非表示に */
+    }
+}
+/* ▲【追加】ここまで ▲ */
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+/* ... 既存のコード ... */
