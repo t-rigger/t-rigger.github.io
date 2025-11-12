@@ -188,7 +188,7 @@ nav ul li a:hover::after {
     background-size: cover;
     
     /* ↓ ここでぼかし具合（px）を調整できます */
-    filter: blur(4px); 
+    filter: blur(10px); 
     
     z-index: -1; /* コンテンツの後ろに配置 */
 }
