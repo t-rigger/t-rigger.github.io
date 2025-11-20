@@ -37,7 +37,7 @@ body {
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 40px; /* 左右に40pxの余白を追加 */
+    padding: 80px 40px;
 }
 
 h1, h2, h3 {
@@ -66,11 +66,11 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    margin-bottom: 60px; /* 各セクションの下に余白を増やしました (40px -> 60px) */
+    margin-bottom: 60px;
 }
 
 section:last-of-type {
-    margin-bottom: 0; /* 最後のセクションの余白を削除 */
+    margin-bottom: 0;
 }
 
 
@@ -166,34 +166,26 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-    position: relative; /* 疑似要素(::before)の位置の基準にする */
-    overflow: hidden; /* ぼかしたフチがはみ出ないように */
-    background-color: rgba(240, 244, 248, 0.8); /* 半透明のオーバーレイをここに指定 */
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(240, 244, 248, 0.8);
     background-size: cover;
     text-align: center;
     padding: 180px 0 120px;
-    /* background: ... の行は削除（または上記のように変更） */
 }
 
-/* ▼【追加】ヒーローの背景画像をぼかすための疑似要素 ▼ */
 .hero::before {
     content: '';
     position: absolute;
-    /* ぼかしのフチが切れないよう、上下左右に少し拡大 */
     top: -10px;
     left: -10px;
     right: -10px;
     bottom: -10px;
-    
     background: url('icon.JPG') no-repeat center center;
     background-size: cover;
-    
-    /* ↓ ここでぼかし具合（px）を調整できます */
     filter: blur(10px); 
-    
-    z-index: -1; /* コンテンツの後ろに配置 */
+    z-index: -1;
 }
-/* ▲【追加】ここまで ▲ */
 
 .hero h1 {
     font-size: 3rem;
@@ -226,12 +218,26 @@ nav ul li a:hover::after {
     transform: translateY(-3px);
 }
 
-/* Problems Section */
+/* ▼▼▼ Problems Section (ここを修正しました) ▼▼▼ */
 .problems-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    
+    /* 基本（スマホ）は1列 */
+    grid-template-columns: 1fr;
+    
+    /* 2列にしたときに広がりすぎないように幅を制限 */
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+/* PC・タブレット（768px以上）で強制的に2列にする */
+@media (min-width: 768px) {
+    .problems-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ▲▲▲ ここまで ▲▲▲ */
 
 .problem-card {
     background-color: var(--card-bg-color);
@@ -365,9 +371,9 @@ nav ul li a:hover::after {
     display: flex;
     align-items: baseline;
     gap: 10px;
-    flex-wrap: nowrap; /* ★「wrap」から「nowrap」に変更しました */
+    flex-wrap: nowrap;
     justify-content: center;
-    white-space: nowrap; /* ★ この行を追加しました */
+    white-space: nowrap;
 }
 
 .plan .price .original-price {
@@ -433,12 +439,12 @@ nav ul li a:hover::after {
 }
 
 .spot-plan-card {
-    background-color: var(--card-bg-color); /* 背景色を白に変更 */
+    background-color: var(--card-bg-color);
     padding: 30px;
     border-radius: var(--border-radius);
     text-align: center;
-    border: 1px solid #e0e0e0; /* 少し濃いめの枠線を追加 */
-    box-shadow: var(--shadow); /* 他のカードと統一感を出すために影を追加 */
+    border: 1px solid #e0e0e0;
+    box-shadow: var(--shadow);
 }
 
 .spot-plan-card h3 {
@@ -488,15 +494,13 @@ nav ul li a:hover::after {
     font-weight: 700;
 }
 
-/* ★ 変更点: 以下のスタイルを追加しました ★ */
 .special-offer .highlight-price {
-    font-size: 1.8rem; /* 元の1.2remより大きく設定 */
-    font-weight: 700; /* 太字を維持 */
-    color: #ffffff; /* 背景がオレンジなので白文字を維持 */
-    display: inline-block; /* 改行後の見た目を調整 */
-    margin-top: 5px; /* 上の行との間に少しスペースを追加 */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 5px;
 }
-/* ★ ここまで ★ */
 
 .consultation-steps {
     display: flex;
@@ -606,7 +610,7 @@ nav ul li a:hover::after {
 
 /* Philosophy Section */
 .philosophy {
-    margin-top: 60px; /* 上のセクションとの間に余白を追加 */
+    margin-top: 60px;
     background: linear-gradient(rgba(108, 148, 163, 0.8), rgba(108, 148, 163, 0.8)), url('https://images.unsplash.com/photo-1516542076529-1ea0855399f2?q=80&w=2071&auto=format&fit=crop') no-repeat center center;
     background-size: cover;
     text-align: center;
@@ -652,7 +656,6 @@ nav ul li a:hover::after {
     color: var(--primary-color);
     box-shadow: var(--shadow);
     margin: 0 auto;
-    /* Placeholder for an actual photo */
     background-image: url('icon.JPG');
     background-size: cover;
     background-position: center;
@@ -687,7 +690,7 @@ nav ul li a:hover::after {
 .contact-methods {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* カードの高さを揃える */
+    align-items: stretch;
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -699,8 +702,8 @@ nav ul li a:hover::after {
     min-width: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* コンテンツを上揃えに変更 */
-    align-items: center; /* カード内の要素を中央揃えに */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .contact-card h3 {
@@ -733,6 +736,29 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
+}
+
+/* 無料IT診断ナビリンク */
+li.nav-diagnosis-link a {
+    color: var(--request-button-color) !important;
+    font-weight: 700 !important;
+}
+
+@media (min-width: 769px) {
+    li.nav-diagnosis-link a {
+        background-color: var(--request-button-color);
+        color: white !important;
+        padding: 8px 15px !important;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+    }
+    li.nav-diagnosis-link a:hover {
+        background-color: #e69560;
+        color: white !important;
+    }
+    li.nav-diagnosis-link a::after {
+        display: none !important;
+    }
 }
 
 /* Responsive Styles */
@@ -785,7 +811,7 @@ footer {
         font-size: 1.8rem;
     }
     .container {
-        padding: 60px 20px; /* 左右の余白を調整 */
+        padding: 60px 20px;
     }
     .achievement-comparison {
         flex-direction: column;
@@ -794,41 +820,3 @@ footer {
         width: 100%;
     }
 }
-/* ... 既存のコード ... */
-
-footer {
-    background-color: var(--text-color);
-/* ... 既存のコード ... */
-}
-
-/* ▼【追加】無料IT診断ナビリンクの強調スタイル ▼ */
-li.nav-diagnosis-link a {
-    color: var(--request-button-color) !important;
-    font-weight: 700 !important;
-}
-
-/* デスクトップ表示ではボタン風に */
-@media (min-width: 769px) {
-    li.nav-diagnosis-link a {
-        background-color: var(--request-button-color);
-        color: white !important;
-        padding: 8px 15px !important; /* 上書きのため !important を使用 */
-        border-radius: 20px;
-        transition: background-color 0.3s;
-        /* margin-top: -8px; 
-           ↑他要素との並びが崩れる場合は、この行のコメントを解除して調整してください 
-        */
-    }
-    li.nav-diagnosis-link a:hover {
-        background-color: #e69560; /* 少し濃いアクセント色 */
-        color: white !important;
-    }
-    li.nav-diagnosis-link a::after {
-        display: none !important; /* 下線を非表示に */
-    }
-}
-/* ▲【追加】ここまで ▲ */
-
-/* Responsive Styles */
-@media (max-width: 900px) {
-/* ... 既存のコード ... */
